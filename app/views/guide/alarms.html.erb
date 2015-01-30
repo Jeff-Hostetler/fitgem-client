@@ -1,0 +1,40 @@
+<ul class="pager">
+  <li class="previous">
+    <%= link_to "&larr; Fitbit Resources: Foods".html_safe, guide_foods_path %>
+  </li>
+  <li class="next">
+    <%= link_to "Fitbit Subscriptions &rarr;".html_safe, guide_subscriptions_path %>
+  </li>
+</ul>
+
+<div class="page-header">
+  <h1>Fitbit Resources: Alarms <small>Chapter 7</small></h1>
+</div>
+
+<p>
+  Using the fitgem methods alarm information can be logged to the fitbit.com service, deleted from the service, and queried using various methods.
+</p>
+
+<div class="alert alert-info">
+  <i class="icon-book"></i>
+  View the Fitbit reference page for <a href="http://wiki.fitbit.com/display/API/API-Log-Activity">logging</a> and <a href="http://wiki.fitbit.com/display/API/API-Get-Time-Series">retrieving</a> activity data.
+</div>
+
+<h3>Fetching Alarm Information</h3>
+<p>
+  Once you have an instance of the fitgem client object (for which <code>client.verified? == true</code> you have the ability to retrieve alarm data. One way gets all alarms on a device, and one returns a particular alarm.
+</p>
+
+<table class="table">
+  <tbody>
+  <tr>
+    <td><code>get_alarms(device_id)</code></td>
+    <td>Fetch the current user's alarms on particular device</td>
+  </tr>
+  <tr>
+    <td><code>recent_activities()</code></td>
+    <td>Fetch the current user's recently logged activities</td>
+  </tr>
+
+  </tbody>
+</table>

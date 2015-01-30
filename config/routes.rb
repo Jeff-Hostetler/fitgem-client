@@ -20,9 +20,11 @@ FitgemClient::Application.routes.draw do
     get 'fitbit-resources-activities', controller: :guide, action: :activities, as: :guide_activities
     # chapter 6: fetch/log food data from fitbit
     get 'fitbit-resources-foods', controller: :guide, action: :foods, as: :guide_foods
-    # chapter 7: fitbit data subscriptions
+    # chapter 6: fetch/log food data from fitbit
+    get 'fitbit-resources-alarms', controller: :guide, action: :alarms, as: :guide_alarms
+    # chapter 8: fitbit data subscriptions
     get 'fitbit-data-subscriptions', controller: :guide, action: :subscriptions, as: :guide_subscriptions
-    # chapter 8: fitgem on rails
+    # chapter 9: fitgem on rails
     get 'fitgem-on-rails', controller: :guide, action: :fitgem_on_rails, as: :guide_fitgem_on_rails
   end
 
@@ -32,6 +34,7 @@ FitgemClient::Application.routes.draw do
     get 'body_measurements', controller: 'body_measurements', action: 'show'
     resources :activities, only: [:index, :create]
     resources :foods, only: [:index]
+    resources :alarms, only: [:index, :create]
   end
 
   # Miscellaneous pages

@@ -17,6 +17,9 @@ class GuideController < ApplicationController
   def foods
   end
 
+  def alarms
+  end
+
   #def subscriptions
   #end
 
